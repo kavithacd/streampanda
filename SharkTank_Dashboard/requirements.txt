@@ -4,4 +4,3 @@ pandas
 numpy
 seaborn
 matplotlib
-matpotlib.pyplot
