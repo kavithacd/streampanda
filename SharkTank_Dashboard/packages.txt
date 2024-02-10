@@ -1,3 +1,4 @@
 Pillow
 PIL
 tkinter
+libtk8.6
