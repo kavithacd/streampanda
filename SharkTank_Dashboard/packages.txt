@@ -1,5 +1,4 @@
 Pillow
 PIL
-tkinter
-tk
 libtk8.6
+tkinter
