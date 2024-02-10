@@ -1,0 +1,972 @@
+2024-02-10 09:37:01 [INFO] Question: which entrepreneur has given the highest number of deals
+
+2024-02-10 09:37:01 [INFO] Running PandasAI with openai LLM...
+2024-02-10 09:37:01 [INFO] Prompt ID: 75b68949-5d42-4345-9de8-fe7988a3edb0
+2024-02-10 09:37:01 [INFO] Using prompt: You are provided with the following pandas DataFrames:
+
+<dataframe>
+Dataframe dfs[0], with 1290 rows and 51 columns.
+This is the metadata of the dataframe dfs[0]:
+Season Number,Startup Name,Season Start,Season End,Episode Number,Pitch Number,Original Air Date,Industry,Business Description,Pitchers Gender,Pitchers City,Pitchers State,Pitchers Average Age,Entrepreneur Names,Company Website,Multiple Entrepreneurs,US Viewership,Original Ask Amount,Original Offered Equity,Valuation Requested,Got Deal,Total Deal Amount,Total Deal Equity,Deal Valuation,Number of sharks in deal,Investment Amount Per Shark,Equity Per Shark,Royalty Deal,Loan,Barbara Corcoran Investment Amount,Barbara Corcoran Investment Equity,Mark Cuban Investment Amount,Mark Cuban Investment Equity,Lori Greiner Investment Amount,Lori Greiner Investment Equity,Robert Herjavec Investment Amount,Robert Herjavec Investment Equity,Daymond John Investment Amount,Daymond John Investment Equity,Kevin O Leary Investment Amount,Kevin O Leary Investment Equity,Guest Investment Amount,Guest Investment Equity,Guest Name,Barbara Corcoran Present,Mark Cuban Present,Lori Greiner Present,Robert Herjavec Present,Daymond John Present,Kevin O Leary Present,Guest Present
+1,Mr.Tod'sPieFactory,9-Aug-09,5-Feb-10,1,2,9-Aug-09,Food and Beverage,Mr. Tod's Pie Factory ...,Male,Somerset,NJ,,Tod Wilson,http://whybake.com/,0.0,4.15,460000,10.0,4600000,1,460000.0,50.0,920000.0,2.0,230000.0,25.0,,,230000.0,25.0,,,,,,,230000.0,25.0,,,,,,1.0,0.0,0.0,1.0,1.0,1.0,
+1,AvaTheElephant,9-Aug-09,5-Feb-10,1,1,9-Aug-09,Health/Wellness,Ava The Elephant - Bab...,Female,Atlanta,GA,,Tiffany Krumins,http://www.avatheelephant.com/,0.0,4.15,50000,15.0,333333,1,50000.0,55.0,90909.0,1.0,50000.0,55.0,,,50000.0,55.0,,,,,,,,,,,,,,1.0,0.0,0.0,1.0,1.0,1.0,
+1,Wispots,9-Aug-09,5-Feb-10,1,3,9-Aug-09,Business Services,Wispots - Consumer Ser...,Male,Cary,NC,,Kevin Flannery,http://www.wispots.com/,0.0,4.15,1200000,10.0,12000000,0,,,,,,,,,,,,,,,,,,,,,,,,1.0,0.0,0.0,1.0,1.0,1.0,
+</dataframe>
+
+<conversation>
+User: which entrepreneur has given the highest number of deals
+
+</conversation>
+
+This is the initial python function. Do not change the params. Given the context, use the right dataframes.
+```python
+# TODO import all the dependencies required
+import pandas as pd
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+```
+
+Take a deep breath and reason step-by-step. Act as a senior data analyst.
+In the answer, you must never write the "technical" names of the tables.
+Based on the last message in the conversation:
+- return the updated analyze_data function wrapped within ```python ```
+2024-02-10 09:37:01 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2024-02-10 09:37:01 [INFO] Retrying request to /chat/completions in 0.927103 seconds
+2024-02-10 09:37:02 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2024-02-10 09:37:02 [INFO] Retrying request to /chat/completions in 1.759743 seconds
+2024-02-10 09:37:04 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2024-02-10 09:38:51 [INFO] Question: which entrepreneur has given the highest number of deals
+
+2024-02-10 09:38:51 [INFO] Running PandasAI with openai LLM...
+2024-02-10 09:38:51 [INFO] Prompt ID: 2a048389-f76e-4930-b820-0e50b328d522
+2024-02-10 09:38:51 [INFO] Using prompt: You are provided with the following pandas DataFrames:
+
+<dataframe>
+Dataframe dfs[0], with 1290 rows and 51 columns.
+This is the metadata of the dataframe dfs[0]:
+Season Number,Startup Name,Season Start,Season End,Episode Number,Pitch Number,Original Air Date,Industry,Business Description,Pitchers Gender,Pitchers City,Pitchers State,Pitchers Average Age,Entrepreneur Names,Company Website,Multiple Entrepreneurs,US Viewership,Original Ask Amount,Original Offered Equity,Valuation Requested,Got Deal,Total Deal Amount,Total Deal Equity,Deal Valuation,Number of sharks in deal,Investment Amount Per Shark,Equity Per Shark,Royalty Deal,Loan,Barbara Corcoran Investment Amount,Barbara Corcoran Investment Equity,Mark Cuban Investment Amount,Mark Cuban Investment Equity,Lori Greiner Investment Amount,Lori Greiner Investment Equity,Robert Herjavec Investment Amount,Robert Herjavec Investment Equity,Daymond John Investment Amount,Daymond John Investment Equity,Kevin O Leary Investment Amount,Kevin O Leary Investment Equity,Guest Investment Amount,Guest Investment Equity,Guest Name,Barbara Corcoran Present,Mark Cuban Present,Lori Greiner Present,Robert Herjavec Present,Daymond John Present,Kevin O Leary Present,Guest Present
+1,Mr.Tod'sPieFactory,9-Aug-09,5-Feb-10,1,2,9-Aug-09,Food and Beverage,Mr. Tod's Pie Factory ...,Male,Somerset,NJ,,Tod Wilson,http://whybake.com/,0.0,4.15,460000,10.0,4600000,1,460000.0,50.0,920000.0,2.0,230000.0,25.0,,,230000.0,25.0,,,,,,,230000.0,25.0,,,,,,1.0,0.0,0.0,1.0,1.0,1.0,
+1,AvaTheElephant,9-Aug-09,5-Feb-10,1,1,9-Aug-09,Health/Wellness,Ava The Elephant - Bab...,Female,Atlanta,GA,,Tiffany Krumins,http://www.avatheelephant.com/,0.0,4.15,50000,15.0,333333,1,50000.0,55.0,90909.0,1.0,50000.0,55.0,,,50000.0,55.0,,,,,,,,,,,,,,1.0,0.0,0.0,1.0,1.0,1.0,
+1,Wispots,9-Aug-09,5-Feb-10,1,3,9-Aug-09,Business Services,Wispots - Consumer Ser...,Male,Cary,NC,,Kevin Flannery,http://www.wispots.com/,0.0,4.15,1200000,10.0,12000000,0,,,,,,,,,,,,,,,,,,,,,,,,1.0,0.0,0.0,1.0,1.0,1.0,
+</dataframe>
+
+<conversation>
+User: which entrepreneur has given the highest number of deals
+
+</conversation>
+
+This is the initial python function. Do not change the params. Given the context, use the right dataframes.
+```python
+# TODO import all the dependencies required
+import pandas as pd
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+```
+
+Take a deep breath and reason step-by-step. Act as a senior data analyst.
+In the answer, you must never write the "technical" names of the tables.
+Based on the last message in the conversation:
+- return the updated analyze_data function wrapped within ```python ```
+2024-02-10 09:39:07 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-02-10 09:39:07 [INFO] Code generated:
+```
+# TODO import all the dependencies required
+import pandas as pd
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+    
+    # Prepare: No preprocessing or cleaning required
+    
+    # Process: Count the number of deals for each entrepreneur
+    entrepreneurs = dfs[0]['Entrepreneur Names'].value_counts()
+    
+    # Analyze: Find the entrepreneur with the highest number of deals
+    max_deals = entrepreneurs.max()
+    top_entrepreneurs = entrepreneurs[entrepreneurs == max_deals]
+    top_entrepreneur = top_entrepreneurs.index[0]
+    
+    # Return the result as a string
+    result = f"The entrepreneur with the highest number of deals is {top_entrepreneur}."
+    return {"type": "string", "value": result}
+```
+
+2024-02-10 09:39:07 [INFO] Saving charts to C:\Users\kavit\Documents\My_Projects\SharkTank_Dashboard\temp_chart.png
+2024-02-10 09:39:07 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png" }
+    """
+    entrepreneurs = dfs[0]['Entrepreneur Names'].value_counts()
+    max_deals = entrepreneurs.max()
+    top_entrepreneurs = entrepreneurs[entrepreneurs == max_deals]
+    top_entrepreneur = top_entrepreneurs.index[0]
+    result = f'The entrepreneur with the highest number of deals is {top_entrepreneur}.'
+    return {'type': 'string', 'value': result}
+        ```
+2024-02-10 09:39:07 [INFO] Answer: {'type': 'string', 'value': 'The entrepreneur with the highest number of deals is Dave Alwan.'}
+2024-02-10 09:39:07 [INFO] Executed in: 16.653059244155884s
+2024-02-10 09:39:47 [INFO] Question: please plot a  graph showing the number of male and female founders who received a deal
+2024-02-10 09:39:47 [INFO] Running PandasAI with openai LLM...
+2024-02-10 09:39:47 [INFO] Prompt ID: 53e3cc16-6a47-449d-944d-ddb460479546
+2024-02-10 09:39:47 [INFO] Using prompt: You are provided with the following pandas DataFrames:
+
+<dataframe>
+Dataframe dfs[0], with 1290 rows and 51 columns.
+This is the metadata of the dataframe dfs[0]:
+Season Number,Startup Name,Season Start,Season End,Episode Number,Pitch Number,Original Air Date,Industry,Business Description,Pitchers Gender,Pitchers City,Pitchers State,Pitchers Average Age,Entrepreneur Names,Company Website,Multiple Entrepreneurs,US Viewership,Original Ask Amount,Original Offered Equity,Valuation Requested,Got Deal,Total Deal Amount,Total Deal Equity,Deal Valuation,Number of sharks in deal,Investment Amount Per Shark,Equity Per Shark,Royalty Deal,Loan,Barbara Corcoran Investment Amount,Barbara Corcoran Investment Equity,Mark Cuban Investment Amount,Mark Cuban Investment Equity,Lori Greiner Investment Amount,Lori Greiner Investment Equity,Robert Herjavec Investment Amount,Robert Herjavec Investment Equity,Daymond John Investment Amount,Daymond John Investment Equity,Kevin O Leary Investment Amount,Kevin O Leary Investment Equity,Guest Investment Amount,Guest Investment Equity,Guest Name,Barbara Corcoran Present,Mark Cuban Present,Lori Greiner Present,Robert Herjavec Present,Daymond John Present,Kevin O Leary Present,Guest Present
+1,Wispots,9-Aug-09,5-Feb-10,1,3,9-Aug-09,Business Services,Wispots - Consumer Ser...,Male,Cary,NC,,Kevin Flannery,http://www.wispots.com/,0.0,4.15,1200000,10.0,12000000,0,,,,,,,,,,,,,,,,,,,,,,,,1.0,0.0,0.0,1.0,1.0,1.0,
+1,AvaTheElephant,9-Aug-09,5-Feb-10,1,1,9-Aug-09,Health/Wellness,Ava The Elephant - Bab...,Female,Atlanta,GA,,Tiffany Krumins,http://www.avatheelephant.com/,0.0,4.15,50000,15.0,333333,1,50000.0,55.0,90909.0,1.0,50000.0,55.0,,,50000.0,55.0,,,,,,,,,,,,,,1.0,0.0,0.0,1.0,1.0,1.0,
+1,Mr.Tod'sPieFactory,9-Aug-09,5-Feb-10,1,2,9-Aug-09,Food and Beverage,Mr. Tod's Pie Factory ...,Male,Somerset,NJ,,Tod Wilson,http://whybake.com/,0.0,4.15,460000,10.0,4600000,1,460000.0,50.0,920000.0,2.0,230000.0,25.0,,,230000.0,25.0,,,,,,,230000.0,25.0,,,,,,1.0,0.0,0.0,1.0,1.0,1.0,
+</dataframe>
+
+<conversation>
+User: please plot a  graph showing the number of male and female founders who received a deal
+</conversation>
+
+This is the initial python function. Do not change the params. Given the context, use the right dataframes.
+```python
+# TODO import all the dependencies required
+import pandas as pd
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+```
+
+Take a deep breath and reason step-by-step. Act as a senior data analyst.
+In the answer, you must never write the "technical" names of the tables.
+Based on the last message in the conversation:
+- return the updated analyze_data function wrapped within ```python ```
+2024-02-10 09:40:06 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-02-10 09:40:06 [INFO] Code generated:
+```
+# TODO import all the dependencies required
+import pandas as pd
+import matplotlib.pyplot as plt
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+    # Prepare: No preprocessing or cleaning required
+    
+    # Process: Group the data by gender and count the number of founders who received a deal
+    founders_gender = dfs[0].groupby("Pitchers Gender")["Got Deal"].sum()
+    
+    # Analyze: Plot a graph showing the number of male and female founders who received a deal
+    plt.bar(founders_gender.index, founders_gender.values)
+    plt.xlabel("Gender")
+    plt.ylabel("Number of Founders")
+    plt.title("Number of Male and Female Founders Who Received a Deal")
+    plt.savefig("temp_chart.png")
+    plt.close()
+    
+    # Return the path of the plot
+    return {"type": "plot", "value": "temp_chart.png"}
+```
+
+2024-02-10 09:40:06 [INFO] Saving charts to C:\Users\kavit\Documents\My_Projects\SharkTank_Dashboard\temp_chart.png
+2024-02-10 09:40:06 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png" }
+    """
+    founders_gender = dfs[0].groupby('Pitchers Gender')['Got Deal'].sum()
+    plt.bar(founders_gender.index, founders_gender.values)
+    plt.xlabel('Gender')
+    plt.ylabel('Number of Founders')
+    plt.title('Number of Male and Female Founders Who Received a Deal')
+    plt.savefig('C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png')
+    plt.close()
+    return {'type': 'plot', 'value': 'C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png'}
+        ```
+2024-02-10 09:40:06 [INFO] Answer: {'type': 'plot', 'value': 'C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png'}
+2024-02-10 09:40:06 [INFO] Executed in: 18.906322240829468s
+2024-02-10 09:54:27 [INFO] Question: please plot a  graph showing the number of male and female founders who received a deal
+2024-02-10 09:54:27 [INFO] Running PandasAI with openai LLM...
+2024-02-10 09:54:27 [INFO] Prompt ID: 4d51e4ad-ec0e-4cdb-8bfb-12c152bb7ece
+2024-02-10 09:54:27 [INFO] Using cached response
+2024-02-10 09:54:27 [INFO] Code generated:
+```
+# TODO import all the dependencies required
+import pandas as pd
+import matplotlib.pyplot as plt
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+    # Prepare: No preprocessing or cleaning required
+    
+    # Process: Group the data by gender and count the number of founders who received a deal
+    founders_gender = dfs[0].groupby("Pitchers Gender")["Got Deal"].sum()
+    
+    # Analyze: Plot a graph showing the number of male and female founders who received a deal
+    plt.bar(founders_gender.index, founders_gender.values)
+    plt.xlabel("Gender")
+    plt.ylabel("Number of Founders")
+    plt.title("Number of Male and Female Founders Who Received a Deal")
+    plt.savefig("temp_chart.png")
+    plt.close()
+    
+    # Return the path of the plot
+    return {"type": "plot", "value": "temp_chart.png"}
+```
+
+2024-02-10 09:54:27 [INFO] Saving charts to C:\Users\kavit\Documents\My_Projects\SharkTank_Dashboard\temp_chart.png
+2024-02-10 09:54:27 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png" }
+    """
+    founders_gender = dfs[0].groupby('Pitchers Gender')['Got Deal'].sum()
+    plt.bar(founders_gender.index, founders_gender.values)
+    plt.xlabel('Gender')
+    plt.ylabel('Number of Founders')
+    plt.title('Number of Male and Female Founders Who Received a Deal')
+    plt.savefig('C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png')
+    plt.close()
+    return {'type': 'plot', 'value': 'C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png'}
+        ```
+2024-02-10 09:54:28 [INFO] Answer: {'type': 'plot', 'value': 'C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png'}
+2024-02-10 09:54:28 [INFO] Executed in: 0.8252131938934326s
+2024-02-10 09:59:24 [INFO] Question: please plot a  graph showing the number of male and female founders who received a deal
+2024-02-10 09:59:24 [INFO] Running PandasAI with openai LLM...
+2024-02-10 09:59:24 [INFO] Prompt ID: dffd33c7-89a8-4e0f-adb7-0ad473e39262
+2024-02-10 09:59:24 [INFO] Using cached response
+2024-02-10 09:59:24 [INFO] Code generated:
+```
+# TODO import all the dependencies required
+import pandas as pd
+import matplotlib.pyplot as plt
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+    # Prepare: No preprocessing or cleaning required
+    
+    # Process: Group the data by gender and count the number of founders who received a deal
+    founders_gender = dfs[0].groupby("Pitchers Gender")["Got Deal"].sum()
+    
+    # Analyze: Plot a graph showing the number of male and female founders who received a deal
+    plt.bar(founders_gender.index, founders_gender.values)
+    plt.xlabel("Gender")
+    plt.ylabel("Number of Founders")
+    plt.title("Number of Male and Female Founders Who Received a Deal")
+    plt.savefig("temp_chart.png")
+    plt.close()
+    
+    # Return the path of the plot
+    return {"type": "plot", "value": "temp_chart.png"}
+```
+
+2024-02-10 09:59:24 [INFO] Saving charts to C:\Users\kavit\Documents\My_Projects\SharkTank_Dashboard\temp_chart.png
+2024-02-10 09:59:24 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png" }
+    """
+    founders_gender = dfs[0].groupby('Pitchers Gender')['Got Deal'].sum()
+    plt.bar(founders_gender.index, founders_gender.values)
+    plt.xlabel('Gender')
+    plt.ylabel('Number of Founders')
+    plt.title('Number of Male and Female Founders Who Received a Deal')
+    plt.savefig('C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png')
+    plt.close()
+    return {'type': 'plot', 'value': 'C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png'}
+        ```
+2024-02-10 09:59:25 [INFO] Answer: {'type': 'plot', 'value': 'C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png'}
+2024-02-10 09:59:25 [INFO] Executed in: 0.6391685009002686s
+2024-02-10 10:02:21 [INFO] Question: is there any gender bias in the offers accepted
+2024-02-10 10:02:21 [INFO] Running PandasAI with openai LLM...
+2024-02-10 10:02:21 [INFO] Prompt ID: 28d59dd6-efbc-492e-b235-55e036f48a44
+2024-02-10 10:02:21 [INFO] Using prompt: You are provided with the following pandas DataFrames:
+
+<dataframe>
+Dataframe dfs[0], with 1290 rows and 51 columns.
+This is the metadata of the dataframe dfs[0]:
+Season Number,Startup Name,Season Start,Season End,Episode Number,Pitch Number,Original Air Date,Industry,Business Description,Pitchers Gender,Pitchers City,Pitchers State,Pitchers Average Age,Entrepreneur Names,Company Website,Multiple Entrepreneurs,US Viewership,Original Ask Amount,Original Offered Equity,Valuation Requested,Got Deal,Total Deal Amount,Total Deal Equity,Deal Valuation,Number of sharks in deal,Investment Amount Per Shark,Equity Per Shark,Royalty Deal,Loan,Barbara Corcoran Investment Amount,Barbara Corcoran Investment Equity,Mark Cuban Investment Amount,Mark Cuban Investment Equity,Lori Greiner Investment Amount,Lori Greiner Investment Equity,Robert Herjavec Investment Amount,Robert Herjavec Investment Equity,Daymond John Investment Amount,Daymond John Investment Equity,Kevin O Leary Investment Amount,Kevin O Leary Investment Equity,Guest Investment Amount,Guest Investment Equity,Guest Name,Barbara Corcoran Present,Mark Cuban Present,Lori Greiner Present,Robert Herjavec Present,Daymond John Present,Kevin O Leary Present,Guest Present
+1,Mr.Tod'sPieFactory,9-Aug-09,5-Feb-10,1,2,9-Aug-09,Food and Beverage,Mr. Tod's Pie Factory ...,Male,Somerset,NJ,,Tod Wilson,http://whybake.com/,0.0,4.15,460000,10.0,4600000,1,460000.0,50.0,920000.0,2.0,230000.0,25.0,,,230000.0,25.0,,,,,,,230000.0,25.0,,,,,,1.0,0.0,0.0,1.0,1.0,1.0,
+1,Wispots,9-Aug-09,5-Feb-10,1,3,9-Aug-09,Business Services,Wispots - Consumer Ser...,Male,Cary,NC,,Kevin Flannery,http://www.wispots.com/,0.0,4.15,1200000,10.0,12000000,0,,,,,,,,,,,,,,,,,,,,,,,,1.0,0.0,0.0,1.0,1.0,1.0,
+1,AvaTheElephant,9-Aug-09,5-Feb-10,1,1,9-Aug-09,Health/Wellness,Ava The Elephant - Bab...,Female,Atlanta,GA,,Tiffany Krumins,http://www.avatheelephant.com/,0.0,4.15,50000,15.0,333333,1,50000.0,55.0,90909.0,1.0,50000.0,55.0,,,50000.0,55.0,,,,,,,,,,,,,,1.0,0.0,0.0,1.0,1.0,1.0,
+</dataframe>
+
+<conversation>
+User: is there any gender bias in the offers accepted
+</conversation>
+
+This is the initial python function. Do not change the params. Given the context, use the right dataframes.
+```python
+# TODO import all the dependencies required
+import pandas as pd
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+```
+
+Take a deep breath and reason step-by-step. Act as a senior data analyst.
+In the answer, you must never write the "technical" names of the tables.
+Based on the last message in the conversation:
+- return the updated analyze_data function wrapped within ```python ```
+2024-02-10 10:02:45 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-02-10 10:02:45 [INFO] Code generated:
+```
+# TODO import all the dependencies required
+import pandas as pd
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+    
+    # Prepare: No preprocessing or cleaning required
+    
+    # Process: Calculate the percentage of offers accepted by gender
+    total_offers = dfs[0].shape[0]
+    total_accepted = dfs[0][dfs[0]['Got Deal'] == 1].shape[0]
+    total_accepted_male = dfs[0][(dfs[0]['Got Deal'] == 1) & (dfs[0]['Pitchers Gender'] == 'Male')].shape[0]
+    total_accepted_female = dfs[0][(dfs[0]['Got Deal'] == 1) & (dfs[0]['Pitchers Gender'] == 'Female')].shape[0]
+    
+    percentage_accepted_male = (total_accepted_male / total_accepted) * 100
+    percentage_accepted_female = (total_accepted_female / total_accepted) * 100
+    
+    # Analyze: Check if there is gender bias in the offers accepted
+    if percentage_accepted_male > percentage_accepted_female:
+        result = "There is a gender bias in the offers accepted. More offers are accepted from male pitchers."
+    elif percentage_accepted_male < percentage_accepted_female:
+        result = "There is a gender bias in the offers accepted. More offers are accepted from female pitchers."
+    else:
+        result = "There is no gender bias in the offers accepted. Offers are equally accepted from male and female pitchers."
+    
+    return {"type": "string", "value": result}
+```
+
+2024-02-10 10:02:45 [INFO] Saving charts to C:\Users\kavit\Documents\My_Projects\SharkTank_Dashboard\temp_chart.png
+2024-02-10 10:02:45 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png" }
+    """
+    total_offers = dfs[0].shape[0]
+    total_accepted = dfs[0][dfs[0]['Got Deal'] == 1].shape[0]
+    total_accepted_male = dfs[0][(dfs[0]['Got Deal'] == 1) & (dfs[0]['Pitchers Gender'] == 'Male')].shape[0]
+    total_accepted_female = dfs[0][(dfs[0]['Got Deal'] == 1) & (dfs[0]['Pitchers Gender'] == 'Female')].shape[0]
+    percentage_accepted_male = total_accepted_male / total_accepted * 100
+    percentage_accepted_female = total_accepted_female / total_accepted * 100
+    if percentage_accepted_male > percentage_accepted_female:
+        result = 'There is a gender bias in the offers accepted. More offers are accepted from male pitchers.'
+    elif percentage_accepted_male < percentage_accepted_female:
+        result = 'There is a gender bias in the offers accepted. More offers are accepted from female pitchers.'
+    else:
+        result = 'There is no gender bias in the offers accepted. Offers are equally accepted from male and female pitchers.'
+    return {'type': 'string', 'value': result}
+        ```
+2024-02-10 10:02:45 [INFO] Answer: {'type': 'string', 'value': 'There is a gender bias in the offers accepted. More offers are accepted from male pitchers.'}
+2024-02-10 10:02:45 [INFO] Executed in: 24.353479385375977s
+2024-02-10 10:03:37 [INFO] Question: is there any gender bias in the offers accepted
+2024-02-10 10:03:37 [INFO] Running PandasAI with openai LLM...
+2024-02-10 10:03:37 [INFO] Prompt ID: b10f5aad-7347-4e14-bd11-c22943348901
+2024-02-10 10:03:37 [INFO] Using cached response
+2024-02-10 10:03:37 [INFO] Code generated:
+```
+# TODO import all the dependencies required
+import pandas as pd
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+    
+    # Prepare: No preprocessing or cleaning required
+    
+    # Process: Calculate the percentage of offers accepted by gender
+    total_offers = dfs[0].shape[0]
+    total_accepted = dfs[0][dfs[0]['Got Deal'] == 1].shape[0]
+    total_accepted_male = dfs[0][(dfs[0]['Got Deal'] == 1) & (dfs[0]['Pitchers Gender'] == 'Male')].shape[0]
+    total_accepted_female = dfs[0][(dfs[0]['Got Deal'] == 1) & (dfs[0]['Pitchers Gender'] == 'Female')].shape[0]
+    
+    percentage_accepted_male = (total_accepted_male / total_accepted) * 100
+    percentage_accepted_female = (total_accepted_female / total_accepted) * 100
+    
+    # Analyze: Check if there is gender bias in the offers accepted
+    if percentage_accepted_male > percentage_accepted_female:
+        result = "There is a gender bias in the offers accepted. More offers are accepted from male pitchers."
+    elif percentage_accepted_male < percentage_accepted_female:
+        result = "There is a gender bias in the offers accepted. More offers are accepted from female pitchers."
+    else:
+        result = "There is no gender bias in the offers accepted. Offers are equally accepted from male and female pitchers."
+    
+    return {"type": "string", "value": result}
+```
+
+2024-02-10 10:03:37 [INFO] Saving charts to C:\Users\kavit\Documents\My_Projects\SharkTank_Dashboard\temp_chart.png
+2024-02-10 10:03:37 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png" }
+    """
+    total_offers = dfs[0].shape[0]
+    total_accepted = dfs[0][dfs[0]['Got Deal'] == 1].shape[0]
+    total_accepted_male = dfs[0][(dfs[0]['Got Deal'] == 1) & (dfs[0]['Pitchers Gender'] == 'Male')].shape[0]
+    total_accepted_female = dfs[0][(dfs[0]['Got Deal'] == 1) & (dfs[0]['Pitchers Gender'] == 'Female')].shape[0]
+    percentage_accepted_male = total_accepted_male / total_accepted * 100
+    percentage_accepted_female = total_accepted_female / total_accepted * 100
+    if percentage_accepted_male > percentage_accepted_female:
+        result = 'There is a gender bias in the offers accepted. More offers are accepted from male pitchers.'
+    elif percentage_accepted_male < percentage_accepted_female:
+        result = 'There is a gender bias in the offers accepted. More offers are accepted from female pitchers.'
+    else:
+        result = 'There is no gender bias in the offers accepted. Offers are equally accepted from male and female pitchers.'
+    return {'type': 'string', 'value': result}
+        ```
+2024-02-10 10:03:37 [INFO] Answer: {'type': 'string', 'value': 'There is a gender bias in the offers accepted. More offers are accepted from male pitchers.'}
+2024-02-10 10:03:37 [INFO] Executed in: 0.05113506317138672s
+2024-02-10 10:03:55 [INFO] Question: is there any gender bias in the offers accepted, and can you show it through plots
+2024-02-10 10:03:55 [INFO] Running PandasAI with openai LLM...
+2024-02-10 10:03:55 [INFO] Prompt ID: d0380df4-8d21-4eb3-a186-4ec402419be5
+2024-02-10 10:03:55 [INFO] Using prompt: You are provided with the following pandas DataFrames:
+
+<dataframe>
+Dataframe dfs[0], with 1290 rows and 51 columns.
+This is the metadata of the dataframe dfs[0]:
+Season Number,Startup Name,Season Start,Season End,Episode Number,Pitch Number,Original Air Date,Industry,Business Description,Pitchers Gender,Pitchers City,Pitchers State,Pitchers Average Age,Entrepreneur Names,Company Website,Multiple Entrepreneurs,US Viewership,Original Ask Amount,Original Offered Equity,Valuation Requested,Got Deal,Total Deal Amount,Total Deal Equity,Deal Valuation,Number of sharks in deal,Investment Amount Per Shark,Equity Per Shark,Royalty Deal,Loan,Barbara Corcoran Investment Amount,Barbara Corcoran Investment Equity,Mark Cuban Investment Amount,Mark Cuban Investment Equity,Lori Greiner Investment Amount,Lori Greiner Investment Equity,Robert Herjavec Investment Amount,Robert Herjavec Investment Equity,Daymond John Investment Amount,Daymond John Investment Equity,Kevin O Leary Investment Amount,Kevin O Leary Investment Equity,Guest Investment Amount,Guest Investment Equity,Guest Name,Barbara Corcoran Present,Mark Cuban Present,Lori Greiner Present,Robert Herjavec Present,Daymond John Present,Kevin O Leary Present,Guest Present
+1,AvaTheElephant,9-Aug-09,5-Feb-10,1,1,9-Aug-09,Health/Wellness,Ava The Elephant - Bab...,Female,Atlanta,GA,,Tiffany Krumins,http://www.avatheeleph...,0.0,4.15,50000,15.0,333333,1,50000.0,55.0,90909.0,1.0,50000.0,55.0,,,50000.0,55.0,,,,,,,,,,,,,,1.0,0.0,0.0,1.0,1.0,1.0,
+1,Wispots,9-Aug-09,5-Feb-10,1,3,9-Aug-09,Business Services,Wispots - Consumer Ser...,Male,Cary,NC,,Kevin Flannery,http://www.wispots.com...,0.0,4.15,1200000,10.0,12000000,0,,,,,,,,,,,,,,,,,,,,,,,,1.0,0.0,0.0,1.0,1.0,1.0,
+1,Mr.Tod'sPieFactory,9-Aug-09,5-Feb-10,1,2,9-Aug-09,Food and Beverage,Mr. Tod's Pie Factory ...,Male,Somerset,NJ,,Tod Wilson,http://whybake.com/...,0.0,4.15,460000,10.0,4600000,1,460000.0,50.0,920000.0,2.0,230000.0,25.0,,,230000.0,25.0,,,,,,,230000.0,25.0,,,,,,1.0,0.0,0.0,1.0,1.0,1.0,
+</dataframe>
+
+<conversation>
+User: is there any gender bias in the offers accepted, and can you show it through plots
+</conversation>
+
+This is the initial python function. Do not change the params. Given the context, use the right dataframes.
+```python
+# TODO import all the dependencies required
+import pandas as pd
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+```
+
+Take a deep breath and reason step-by-step. Act as a senior data analyst.
+In the answer, you must never write the "technical" names of the tables.
+Based on the last message in the conversation:
+- return the updated analyze_data function wrapped within ```python ```
+2024-02-10 10:04:15 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-02-10 10:04:15 [INFO] Code generated:
+```
+# TODO import all the dependencies required
+import pandas as pd
+import matplotlib.pyplot as plt
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+    # Prepare: No preprocessing or cleaning required
+    
+    # Process: Filter the data to include only the rows where a deal was made
+    deals_df = dfs[0][dfs[0]['Got Deal'] == 1]
+    
+    # Analyze: Calculate the percentage of accepted offers by gender
+    gender_counts = deals_df['Pitchers Gender'].value_counts()
+    total_deals = gender_counts.sum()
+    gender_percentages = gender_counts / total_deals * 100
+    
+    # Plot: Create a bar plot of the gender bias in accepted offers
+    plt.figure(figsize=(8, 6))
+    gender_percentages.plot(kind='bar', color='blue')
+    plt.xlabel('Gender')
+    plt.ylabel('Percentage')
+    plt.title('Gender Bias in Accepted Offers')
+    plt.savefig('temp_chart.png')
+    plt.close()
+    
+    # Return the path of the plot
+    return {"type": "plot", "value": "temp_chart.png"}
+```
+
+2024-02-10 10:04:15 [INFO] Saving charts to C:\Users\kavit\Documents\My_Projects\SharkTank_Dashboard\temp_chart.png
+2024-02-10 10:04:15 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png" }
+    """
+    deals_df = dfs[0][dfs[0]['Got Deal'] == 1]
+    gender_counts = deals_df['Pitchers Gender'].value_counts()
+    total_deals = gender_counts.sum()
+    gender_percentages = gender_counts / total_deals * 100
+    plt.figure(figsize=(8, 6))
+    gender_percentages.plot(kind='bar', color='blue')
+    plt.xlabel('Gender')
+    plt.ylabel('Percentage')
+    plt.title('Gender Bias in Accepted Offers')
+    plt.savefig('C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png')
+    plt.close()
+    return {'type': 'plot', 'value': 'C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png'}
+        ```
+2024-02-10 10:04:15 [INFO] Answer: {'type': 'plot', 'value': 'C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png'}
+2024-02-10 10:04:15 [INFO] Executed in: 20.201112508773804s
+2024-02-10 10:04:46 [INFO] Question: is there any gender bias in the offers accepted, and can you show it through plots
+2024-02-10 10:04:46 [INFO] Running PandasAI with openai LLM...
+2024-02-10 10:04:46 [INFO] Prompt ID: c30e3472-80a3-40b9-bf80-c85ae0f8a2cc
+2024-02-10 10:04:46 [INFO] Using prompt: You are provided with the following pandas DataFrames:
+
+<dataframe>
+Dataframe dfs[0], with 336 rows and 77 columns.
+This is the metadata of the dataframe dfs[0]:
+Season Number,Startup Name,Season Start,Season End,Episode Number,Episode Title,Anchor,Pitch Number,Industry,Business Description,Company Website,Number of Presenters,Male Presenters,Female Presenters,Transgender Presenters,Couple Presenters,Pitchers Average Age,Started in,Pitchers City,Pitchers State,Yearly Revenue,Cash Burn,Monthly Sales,Gross Margin,Net Margin,SKUs,Original Ask Amount,Original Offered Equity,Valuation Requested,Received Offer,Accepted Offer,Total Deal Amount,Total Deal Equity,Total Deal Debt,Debt Interest,Deal Valuation,Number of sharks in deal,Deal has conditions,Has Patents,Royalty deal,Ashneer Investment Amount,Ashneer Investment Equity,Ashneer Debt Amount,Namita Investment Amount,Namita Investment Equity,Namita Debt Amount,Anupam Investment Amount,Anupam Investment Equity,Anupam Debt Amount,Vineeta Investment Amount,Vineeta Investment Equity,Vineeta Debt Amount,Aman Investment Amount,Aman Investment Equity,Aman Debt Amount,Peyush Investment Amount,Peyush Investment Equity,Peyush Debt Amount,Ghazal Investment Amount,Ghazal Investment Equity,Ghazal Debt Amount,Amit Investment Amount,Amit Investment Equity,Amit Debt Amount,Guest Investment Amount,Guest Investment Equity,Guest Debt Amount,Guest Name,Ashneer Present,Namita Present,Anupam Present,Vineeta Present,Aman Present,Peyush Present,Ghazal Present,Amit Present,Guest Present
+1,BluePineFoods,20-Dec-21,4-Feb-22,1,Badlegi Business Ki Ta...,Rannvijay Singh,1,Food,Frozen Momos,https://bluepinefoods....,3,2.0,1.0,,0.0,Middle,2016.0,Delhi,Delhi,95.0,,8.0,,,,50.0,5.0,1000.0,1,1.0,75.0,16.0,,,469.0,3.0,,,,25.0,5.33,,,,,,,,25.0,5.33,,25.0,5.33,,,,,,,,,,,,,,,1.0,1.0,1.0,1.0,1.0,,,,
+1,BoozScooters,20-Dec-21,4-Feb-22,1,Badlegi Business Ki Ta...,Rannvijay Singh,2,Vehicles/Electrical Vehicles,Renting e-bike for mobility in private spaces,https://www.boozup.net...,1,1.0,,,0.0,Young,2017.0,Ahmedabad,Gujarat,4.0,,0.4,,,,40.0,15.0,267.0,1,1.0,40.0,50.0,,,80.0,2.0,,,,20.0,25.0,,,,,,,,20.0,25.0,,,,,,,,,,,,,,,,,,1.0,1.0,1.0,1.0,1.0,,,,
+1,HeartUpMySleeves,20-Dec-21,4-Feb-22,1,Badlegi Business Ki Ta...,Rannvijay Singh,3,Beauty/Fashion,Detachable Sleeves,https://heartupmysleev...,1,,1.0,,0.0,Young,2021.0,Delhi,Delhi,,,2.0,,,,25.0,10.0,250.0,1,1.0,25.0,30.0,,,83.0,2.0,,,,,,,,,,12.5,15.0,,12.5,15.0,,,,,,,,,,,,,,,,,,1.0,1.0,1.0,1.0,1.0,,,,
+</dataframe>
+
+<conversation>
+User: is there any gender bias in the offers accepted, and can you show it through plots
+</conversation>
+
+This is the initial python function. Do not change the params. Given the context, use the right dataframes.
+```python
+# TODO import all the dependencies required
+import pandas as pd
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+```
+
+Take a deep breath and reason step-by-step. Act as a senior data analyst.
+In the answer, you must never write the "technical" names of the tables.
+Based on the last message in the conversation:
+- return the updated analyze_data function wrapped within ```python ```
+2024-02-10 10:05:10 [INFO] HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-02-10 10:05:10 [INFO] Code generated:
+```
+# TODO import all the dependencies required
+import pandas as pd
+import matplotlib.pyplot as plt
+
+def analyze_data(dfs: list[pd.DataFrame]) -> dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "temp_chart.png" }
+    """
+    # Prepare: No preprocessing or cleaning required
+    
+    # Process: Calculate the percentage of offers accepted by gender
+    df = dfs[0]
+    total_offers = len(df)
+    total_accepted = len(df[df['Accepted Offer'] == 1])
+    male_accepted = len(df[(df['Accepted Offer'] == 1) & (df['Male Presenters'] > 0)])
+    female_accepted = len(df[(df['Accepted Offer'] == 1) & (df['Female Presenters'] > 0)])
+    transgender_accepted = len(df[(df['Accepted Offer'] == 1) & (df['Transgender Presenters'] > 0)])
+    
+    male_acceptance_rate = (male_accepted / total_accepted) * 100
+    female_acceptance_rate = (female_accepted / total_accepted) * 100
+    transgender_acceptance_rate = (transgender_accepted / total_accepted) * 100
+    
+    # Analyze: Create a bar plot to visualize the acceptance rates by gender
+    labels = ['Male', 'Female', 'Transgender']
+    acceptance_rates = [male_acceptance_rate, female_acceptance_rate, transgender_acceptance_rate]
+    
+    plt.bar(labels, acceptance_rates)
+    plt.xlabel('Gender')
+    plt.ylabel('Acceptance Rate (%)')
+    plt.title('Acceptance Rates by Gender')
+    plt.savefig('temp_chart.png')
+    plt.close()
+    
+    return {
+        "type": "plot",
+        "value": "temp_chart.png"
+    }
+```
+
+2024-02-10 10:05:10 [INFO] Saving charts to C:\Users\kavit\Documents\My_Projects\SharkTank_Dashboard\temp_chart.png
+2024-02-10 10:05:10 [INFO] 
+Code running:
+```
+def analyze_data(dfs: list[pd.DataFrame]) ->dict:
+    """
+    Analyze the data, using the provided dataframes (`dfs`).
+    1. Prepare: Preprocessing and cleaning data if necessary
+    2. Process: Manipulating data for analysis (grouping, filtering, aggregating, etc.)
+    3. Analyze: Conducting the actual analysis (if the user asks to plot a chart you must save it as an image in C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png and not show the chart.)
+    If the user requests to create a chart, utilize the Python matplotlib library to generate high-quality graphics that will be saved directly to a file.
+    At the end, return a dictionary of:
+    - type (possible values "string", "number", "dataframe", "plot")
+    - value (can be a string, a dataframe or the path of the plot, NOT a dictionary)
+    Examples: 
+        { "type": "string", "value": f"The highest salary is {highest_salary}." }
+        or
+        { "type": "number", "value": 125 }
+        or
+        { "type": "dataframe", "value": pd.DataFrame({...}) }
+        or
+        { "type": "plot", "value": "C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png" }
+    """
+    df = dfs[0]
+    total_offers = len(df)
+    total_accepted = len(df[df['Accepted Offer'] == 1])
+    male_accepted = len(df[(df['Accepted Offer'] == 1) & (df['Male Presenters'] > 0)])
+    female_accepted = len(df[(df['Accepted Offer'] == 1) & (df['Female Presenters'] > 0)])
+    transgender_accepted = len(df[(df['Accepted Offer'] == 1) & (df['Transgender Presenters'] > 0)])
+    male_acceptance_rate = male_accepted / total_accepted * 100
+    female_acceptance_rate = female_accepted / total_accepted * 100
+    transgender_acceptance_rate = transgender_accepted / total_accepted * 100
+    labels = ['Male', 'Female', 'Transgender']
+    acceptance_rates = [male_acceptance_rate, female_acceptance_rate, transgender_acceptance_rate]
+    plt.bar(labels, acceptance_rates)
+    plt.xlabel('Gender')
+    plt.ylabel('Acceptance Rate (%)')
+    plt.title('Acceptance Rates by Gender')
+    plt.savefig('C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png')
+    plt.close()
+    return {'type': 'plot', 'value': 'C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png'}
+        ```
+2024-02-10 10:05:11 [INFO] Answer: {'type': 'plot', 'value': 'C:/Users/kavit/Documents/My_Projects/SharkTank_Dashboard/temp_chart.png'}
+2024-02-10 10:05:11 [INFO] Executed in: 24.567884922027588s
