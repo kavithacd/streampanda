@@ -2,7 +2,6 @@ streamlit
 pandasai
 pandas
 numpy
-Pillow
 seaborn
 matplotlib
 matpotlib.pyplot
