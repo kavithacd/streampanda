@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from pandasai import PandasAI
+from pandasai import SmartDataframe
 from pandasai.llm.openai import OpenAI
 import matplotlib.pyplot as plt
 import seaborn as sns
