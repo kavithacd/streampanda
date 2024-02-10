@@ -9,7 +9,7 @@ from PIL import Image
 # Set page configuration
 st.set_page_config(
     page_title="Sales Analysis App",
-    page_icon=Image.open(r"C:\Users\kavit\Documents\My_Projects\SharkTank_Dashboard\streampanda.png"),
+    page_icon=Image.open('SharkTank_Dashboard/streampanda.png'),
     layout="wide",
     initial_sidebar_state="expanded"
 )
