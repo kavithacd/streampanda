@@ -1,3 +1,6 @@
+! /home/adminuser/venv/bin/python -m pip install --upgrade pip
+!pip install pandasai
+
 import streamlit as st
 import pandas as pd
 from pandasai import PandasAI
