@@ -1,0 +1,8 @@
+streamlit
+pandasai
+pandas
+numpy
+PIL
+seaborn
+matplotlib
+matpotlib.pyplot
